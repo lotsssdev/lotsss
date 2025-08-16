@@ -1,0 +1,17 @@
+Task/Activity,Date,Start,End,Total Hours,Notes
+Reunião de Discovery com time da Lotsss,2025-08-06,15:00:00,17:00:00,2,"Foi definido que o objetivo principal do projeto é aumentar a geração de receita em 200% no prazo de até seis meses. A partir dessa meta, foram mapeados os principais desafios e identificadas duas direções possíveis para alcançá-la. O primeiro desafio está relacionado à capacidade de escalar o volume de vendas. Para isso, foi considerada a criação de uma plataforma de marketplace com um sistema de compra por bid, ou seja, um modelo de leilão voltado para investidores interessados em adquirir lotes com intenção de revenda. Essa solução permitiria ampliar o alcance e a velocidade das vendas dentro do público investidor.
+
+No entanto, a principal dificuldade enfrentada atualmente não está na compra de terrenos nem na venda para investidores. O real entrave está na revenda desses terrenos para o consumidor final, ou seja, pessoas interessadas em comprar o lote para uso próprio, seja para construir ou manter como patrimônio de longo prazo. Diante disso, optou-se por priorizar a resolução desse gargalo, focando esforços na criação de uma solução voltada à revenda dos terrenos já adquiridos por investidores.
+
+A hipótese que será desenvolvida é a criação de uma plataforma capaz de centralizar o cadastro dos lotes e, a partir dessas informações, ativar automaticamente diversos canais de comercialização. Essa plataforma deverá permitir que, com um único cadastro, o lote seja divulgado em diferentes meios simultaneamente: redes sociais como Facebook, grupos específicos do Facebook, entre outros. Além disso, a plataforma deverá integrar soluções de mala direta, viabilizando o envio de correspondências para moradores vizinhos em um raio determinado a partir do endereço do lote, utilizando bases de endereços georreferenciados. Também será prevista a geração automatizada de pedidos para gráficas, com o objetivo de produzir placas de venda físicas para os terrenos.
+
+Em resumo, trata-se de uma plataforma de revenda inteligente, capaz de transformar o cadastro de um terreno em uma ação coordenada de divulgação multicanal, com foco na liquidez dos ativos e no atingimento da meta de crescimento estabelecida."
+Analise de viabilidade do que foi solicitado pelo Almerindo,2025-08-09,19:00:00,21:50:00,2.83,
+Conversa para alinhamento sobre próximos passos,2025-08-10,10:00:00,11:00:00,1,Al pediu para segurar a construção do sistema de canais e estou focando agora na preparação da base do projeto.
+"Construção dos componentes reutilizáveis ",2025-08-11,17:00:00,19:00:00,2,"Para dar velocidade na criação da plataforma, eu estou criando todos os componentes Shadcn para serem reutilizáveis "
+Criação da Scheme do banco de dados,2025-08-12,17:00:00,19:00:00,2,
+"Instalação de config do GitHub, Supabase e Vercel",2025-08-13,16:30:00,19:00:00,2.5,
+"Finalizando Construção dos componentes reutilizáveis ",2025-08-14,10:00:00,12:00:00,2,
+"Instalação do projeto e configuração idiomas, autenticação",2025-08-14,14:00:00,18:00:00,4,
+Criação do painel de administração + Build + Deploy Vercel,2025-08-15,15:00:00,22:00:00,7,
+,,,,,

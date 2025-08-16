@@ -12,6 +12,7 @@ interface TurnstileProps {
 export function Turnstile({ onVerify, onError, onExpire, className }: TurnstileProps) {
   const containerRef = useRef<HTMLDivElement>(null)
   const callbacksRef = useRef({ onVerify, onError, onExpire })
+  const widgetIdRef = useRef<string | null>(null)
 
   // Update callbacks ref when they change
   useEffect(() => {
@@ -42,35 +43,76 @@ export function Turnstile({ onVerify, onError, onExpire, className }: TurnstileP
       callbacksRef.current.onExpire?.()
     }
 
-    // Update the div with Turnstile data attributes
-    if (containerRef.current) {
-      containerRef.current.className = `cf-turnstile ${className || ''}`
-      containerRef.current.setAttribute('data-sitekey', siteKey)
-      containerRef.current.setAttribute('data-theme', 'auto')
-      containerRef.current.setAttribute('data-size', 'normal')
-      containerRef.current.setAttribute('data-callback', successCallback)
-      containerRef.current.setAttribute('data-error-callback', errorCallback)
-      containerRef.current.setAttribute('data-expired-callback', expiredCallback)
+    const setupTurnstile = () => {
+      if (!containerRef.current) return
+
+      const turnstile = (window as unknown as Record<string, unknown>).turnstile as {
+        render: (element: HTMLElement, options: Record<string, unknown>) => string
+        remove: (widgetId: string) => void
+      }
+
+      // Remove existing widget if any
+      if (widgetIdRef.current && turnstile?.remove) {
+        try {
+          turnstile.remove(widgetIdRef.current)
+          widgetIdRef.current = null
+        } catch (e) {
+          console.log('Widget removal failed (might not exist)')
+        }
+      }
+
+      // Clear container
+      containerRef.current.innerHTML = ''
+      containerRef.current.className = className || ''
+
+      // Render new widget explicitly
+      if (turnstile?.render) {
+        console.log('🔄 Rendering new Turnstile widget')
+        widgetIdRef.current = turnstile.render(containerRef.current, {
+          sitekey: siteKey,
+          theme: 'auto',
+          size: 'normal',
+          callback: successCallback,
+          'error-callback': errorCallback,
+          'expired-callback': expiredCallback,
+        })
+        console.log('✅ Turnstile widget created with ID:', widgetIdRef.current)
+      }
     }
 
-    // Load script only once using implicit rendering
+    // Load script only once
     if (!document.querySelector('script[src*="turnstile"]')) {
-      console.log('📦 Loading Turnstile script with implicit rendering')
+      console.log('📦 Loading Turnstile script')
       const script = document.createElement('script')
       script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js'
-      script.async = true
-      script.defer = true
+      script.onload = setupTurnstile
       document.head.appendChild(script)
+    } else {
+      // Script already loaded, setup immediately
+      setupTurnstile()
     }
 
     // Cleanup function
     return () => {
+      // Remove widget
+      const turnstile = (window as unknown as Record<string, unknown>).turnstile as {
+        remove: (widgetId: string) => void
+      }
+      
+      if (widgetIdRef.current && turnstile?.remove) {
+        try {
+          turnstile.remove(widgetIdRef.current)
+        } catch (e) {
+          console.log('Widget cleanup failed')
+        }
+      }
+
       // Remove global callbacks
       delete (window as unknown as Record<string, unknown>)[successCallback]
       delete (window as unknown as Record<string, unknown>)[errorCallback] 
       delete (window as unknown as Record<string, unknown>)[expiredCallback]
     }
-  }, [className]) // Include className in dependencies
+  }, [className])
 
   return <div ref={containerRef} className={className} />
 }
