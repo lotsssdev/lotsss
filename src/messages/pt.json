@@ -1,0 +1,154 @@
+{
+  "auth": {
+    "login": {
+      "title": "Bem-vindo de volta",
+      "description": "Entre com sua conta do Google",
+      "email": "Email",
+      "password": "Senha",
+      "forgot": "Esqueceu sua senha?",
+      "submit": "Entrar",
+      "cta": "Não tem uma conta?",
+      "signup": "Cadastre-se"
+    },
+    "signup": {
+      "title": "Criar conta",
+      "description": "Preencha seus dados para começar",
+      "full_name": "Nome completo",
+      "email": "Email",
+      "password": "Senha",
+      "submit": "Criar conta",
+      "cta": "Já tem uma conta?",
+      "login": "Entrar"
+    },
+    "forgot": {
+      "title": "Esqueci minha senha",
+      "description": "Informe seu email para receber o link de redefinição",
+      "email": "Email",
+      "submit": "Enviar link de redefinição",
+      "cta": "Lembrou?",
+      "login": "Entrar"
+    }
+  },
+  "admin": {
+    "sidebar": {
+      "title": "Admin",
+      "dashboard": "Dashboard",
+      "companies": "Empresas",
+      "users": "Usuários",
+      "subscriptions": "Assinaturas",
+      "plans": "Planos & Preços",
+      "billing": "Faturamento"
+    },
+    "companies": {
+      "title": "Empresas",
+      "search": "Buscar por nome, CNPJ/EIN…",
+      "newCompany": "Nova empresa",
+      "edit": "Editar",
+      "delete": "Deletar",
+      "cancel": "Cancelar",
+      "save": "Salvar",
+      "saving": "Salvando...",
+      "create": "Criar",
+      "creating": "Criando...",
+      "deleting": "Excluindo…",
+      "confirmDelete": "Confirmar exclusão",
+      "deleteDescription": "Esta ação não pode ser desfeita. As empresas selecionadas serão removidas.",
+      "createTitle": "Criar empresa",
+      "editTitle": "Editar empresa",
+      "noCompanies": "Nenhuma empresa encontrada.",
+      "columns": {
+        "companyName": "Nome da Empresa",
+        "address": "Endereço",
+        "phone": "Telefone",
+        "email": "Email",
+        "status": "Status",
+        "createdAt": "Criada em"
+      },
+      "form": {
+        "name": "Nome",
+        "legalName": "Razão social",
+        "description": "Descrição",
+        "status": "Status",
+        "taxId": "CNPJ/EIN",
+        "country": "País",
+        "address": "Endereço",
+        "city": "Cidade",
+        "state": "Estado",
+        "zip": "CEP",
+        "phone": "Contato (telefone)",
+        "stripeId": "ID do Cliente Stripe",
+        "active": "Ativa",
+        "inactive": "Inativa",
+        "selectState": "Selecione",
+        "brazil": "Brasil",
+        "usa": "EUA"
+      },
+      "pagination": {
+        "previous": "Anterior",
+        "next": "Próxima",
+        "page": "Página",
+        "of": "de",
+        "results": "resultados"
+      }
+    },
+    "users": {
+      "title": "Usuários",
+      "search": "Buscar por nome, email, username…",
+      "newUser": "Novo usuário",
+      "edit": "Editar",
+      "delete": "Deletar",
+      "cancel": "Cancelar",
+      "save": "Salvar",
+      "saving": "Salvando...",
+      "create": "Criar",
+      "creating": "Criando...",
+      "deleting": "Excluindo…",
+      "confirmDelete": "Confirmar exclusão",
+      "deleteDescription": "Esta ação não pode ser desfeita. Os usuários selecionados serão removidos.",
+      "createTitle": "Criar usuário",
+      "editTitle": "Editar usuário",
+      "noUsers": "Nenhum usuário encontrado.",
+      "columns": {
+        "user": "Usuário",
+        "email": "Email",
+        "username": "Username",
+        "company": "Empresa",
+        "website": "Website",
+        "createdAt": "Criado em"
+      },
+      "form": {
+        "email": "Email",
+        "password": "Senha",
+        "fullName": "Nome completo",
+        "username": "Username",
+        "bio": "Bio",
+        "website": "Website",
+        "avatarUrl": "URL do Avatar",
+        "company": "Empresa",
+        "selectCompany": "Selecione uma empresa (opcional)",
+        "role": "Função",
+        "memberRole": "Membro",
+        "adminRole": "Admin",
+        "ownerRole": "Owner"
+      },
+      "pagination": {
+        "previous": "Anterior",
+        "next": "Próxima",
+        "page": "Página",
+        "of": "de",
+        "results": "resultados"
+      }
+    }
+  },
+  "profile": {
+    "menu": {
+      "upgradeToPro": "Fazer upgrade para Pro",
+      "account": "Conta",
+      "billing": "Faturamento", 
+      "notifications": "Notificações",
+      "language": "Idioma",
+      "logOut": "Sair"
+    }
+  }
+}
+

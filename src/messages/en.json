@@ -1,0 +1,154 @@
+{
+  "auth": {
+    "login": {
+      "title": "Welcome back",
+      "description": "Login with your Google account",
+      "email": "Email",
+      "password": "Password",
+      "forgot": "Forgot your password?",
+      "submit": "Login",
+      "cta": "Don't have an account?",
+      "signup": "Sign up"
+    },
+    "signup": {
+      "title": "Create account",
+      "description": "Fill in your details to get started",
+      "full_name": "Full Name",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Create account",
+      "cta": "Already have an account?",
+      "login": "Log in"
+    },
+    "forgot": {
+      "title": "Forgot password",
+      "description": "Enter your email to receive the reset link",
+      "email": "Email",
+      "submit": "Send reset link",
+      "cta": "Remembered?",
+      "login": "Log in"
+    }
+  },
+  "admin": {
+    "sidebar": {
+      "title": "Admin",
+      "dashboard": "Dashboard",
+      "companies": "Companies",
+      "users": "Users",
+      "subscriptions": "Subscriptions",
+      "plans": "Plans & Pricing",
+      "billing": "Billing"
+    },
+    "companies": {
+      "title": "Companies",
+      "search": "Search by name, EIN/Tax ID…",
+      "newCompany": "New company",
+      "edit": "Edit",
+      "delete": "Delete",
+      "cancel": "Cancel",
+      "save": "Save",
+      "saving": "Saving...",
+      "create": "Create",
+      "creating": "Creating...",
+      "deleting": "Deleting…",
+      "confirmDelete": "Confirm deletion",
+      "deleteDescription": "This action cannot be undone. The selected companies will be removed.",
+      "createTitle": "Create company",
+      "editTitle": "Edit company",
+      "noCompanies": "No companies found.",
+      "columns": {
+        "companyName": "Company Name",
+        "address": "Address",
+        "phone": "Phone",
+        "email": "Email",
+        "status": "Status",
+        "createdAt": "Created at"
+      },
+      "form": {
+        "name": "Name",
+        "legalName": "Legal name",
+        "description": "Description",
+        "status": "Status",
+        "taxId": "EIN/Tax ID",
+        "country": "Country",
+        "address": "Address",
+        "city": "City",
+        "state": "State",
+        "zip": "ZIP",
+        "phone": "Contact (phone)",
+        "stripeId": "Stripe Customer ID",
+        "active": "Active",
+        "inactive": "Inactive",
+        "selectState": "Select",
+        "brazil": "Brazil",
+        "usa": "USA"
+      },
+      "pagination": {
+        "previous": "Previous",
+        "next": "Next",
+        "page": "Page",
+        "of": "of",
+        "results": "results"
+      }
+    },
+    "users": {
+      "title": "Users",
+      "search": "Search by name, email, username…",
+      "newUser": "New user",
+      "edit": "Edit",
+      "delete": "Delete",
+      "cancel": "Cancel",
+      "save": "Save",
+      "saving": "Saving...",
+      "create": "Create",
+      "creating": "Creating...",
+      "deleting": "Deleting…",
+      "confirmDelete": "Confirm deletion",
+      "deleteDescription": "This action cannot be undone. The selected users will be removed.",
+      "createTitle": "Create user",
+      "editTitle": "Edit user",
+      "noUsers": "No users found.",
+      "columns": {
+        "user": "User",
+        "email": "Email",
+        "username": "Username",
+        "company": "Company",
+        "website": "Website",
+        "createdAt": "Created at"
+      },
+      "form": {
+        "email": "Email",
+        "password": "Password",
+        "fullName": "Full name",
+        "username": "Username",
+        "bio": "Bio",
+        "website": "Website",
+        "avatarUrl": "Avatar URL",
+        "company": "Company",
+        "selectCompany": "Select a company (optional)",
+        "role": "Role",
+        "memberRole": "Member",
+        "adminRole": "Admin",
+        "ownerRole": "Owner"
+      },
+      "pagination": {
+        "previous": "Previous",
+        "next": "Next",
+        "page": "Page",
+        "of": "of",
+        "results": "results"
+      }
+    }
+  },
+  "profile": {
+    "menu": {
+      "upgradeToPro": "Upgrade to Pro",
+      "account": "Account",
+      "billing": "Billing", 
+      "notifications": "Notifications",
+      "language": "Language",
+      "logOut": "Log out"
+    }
+  }
+}
+
