@@ -15,6 +15,7 @@ import {
 } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import { Turnstile } from '@/components/ui/turnstile'
 import { signup, type SignupState } from '@/app/signup/actions'
 
 function SubmitButton() {
@@ -56,6 +57,12 @@ export function SignupForm({ className, ...props }: React.ComponentProps<'div'>)
               {state?.error && (
                 <p className="text-sm text-destructive" role="alert">{state.error}</p>
               )}
+              <Turnstile 
+                onVerify={(token) => console.log('Signup Turnstile verified:', token)}
+                onError={() => console.log('Signup Turnstile error')}
+                onExpire={() => console.log('Signup Turnstile expired')}
+                className="flex justify-center"
+              />
               <SubmitButton />
               <div className="text-center text-sm">
                 {t('cta')} <Link href={`/${locale}/login`} className="underline underline-offset-4">{t('login')}</Link>

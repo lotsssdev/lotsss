@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import { Turnstile } from '@/components/ui/turnstile'
 import { sendReset, type ForgotState } from '@/app/forgot-password/actions'
 
 function SubmitButton() {
@@ -45,6 +46,12 @@ export function ForgotPasswordForm({ className, ...props }: React.ComponentProps
               {state?.success && (
                 <p className="text-sm text-green-600" role="status">{state.success}</p>
               )}
+              <Turnstile 
+                onVerify={(token) => console.log('Forgot password Turnstile verified:', token)}
+                onError={() => console.log('Forgot password Turnstile error')}
+                onExpire={() => console.log('Forgot password Turnstile expired')}
+                className="flex justify-center"
+              />
               <SubmitButton />
               <div className="text-center text-sm">
                 {t('cta')} <Link href={`/${locale}/login`} className="underline underline-offset-4">{t('login')}</Link>

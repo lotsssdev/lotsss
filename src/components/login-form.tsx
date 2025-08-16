@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { Turnstile } from "@/components/ui/turnstile"
 import { login, type LoginState } from '@/app/login/actions'
 
 function SubmitButton() {
@@ -88,6 +89,12 @@ export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) 
                     {state.error}
                   </p>
                 )}
+                <Turnstile 
+                  onVerify={(token) => console.log('Login Turnstile verified:', token)}
+                  onError={() => console.log('Login Turnstile error')}
+                  onExpire={() => console.log('Login Turnstile expired')}
+                  className="flex justify-center"
+                />
                 <SubmitButton />
               </div>
               <div className="text-center text-sm">
